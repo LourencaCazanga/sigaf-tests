@@ -1,21 +1,29 @@
-# sigaf-tests
-Testes automatizados do SIGAF (API + UI)
+#SIGAF – Testes Automatizados (API + UI)
 
-Este repositório contém os testes de integração e UI do sistema SIGAF:
+Este repositório contém os testes de integração e interface do sistema SIGAF (Sistema Integrado de Gestão Académica e Filiais), com foco nos seguintes pontos:
 
-Testes da API (Hoppscotch + Newman)
+- Testes da API com coleções exportadas do **Hoppscotch**
+- Testes de interface pública com **Playwright**
+- Execução automática de testes via **GitHub Actions**
 
-Testes de UI do website com Playwright
-  
-#Links
+#Links úteis
 
-Website (frontend): https://website-app-6v7k.onrender.com
+Website: [https://website-app-6v7k.onrender.com](https://website-app-6v7k.onrender.com)
+API: [https://backend-sigaf.onrender.com/api/v1/](https://backend-sigaf.onrender.com/api/v1/)
 
-API(backend): https://backend-sigaf.onrender.com/api/v1/
+#Estrutura do Projeto
 
-#Como executar os testes no GitHub
-
-A cada `push` ou `pull request`, os testes de UI Playwright são executados automaticamente via GitHub Actions
-
-A coleção da API está disponível para ser rodada com o Hoppscotch
-
+```txt
+sigaf-tests-github/
+── api-tests/
+   ── sigaf-hoppscotch-collection.json       # Testes da API exportados do Hoppscotch
+── sigaf-testes/
+   ── testes/
+       ── demo.spec.ts                       # Teste UI público com Playwright
+       ── playwright.config.ts               # Configuração Playwright
+       ── package.json                       # Dependências e scripts
+── .github/
+   ── workflows/
+       ── ui-tests.yml                       # GitHub Actions - testes automatizados
+── .gitignore
+── README.md
