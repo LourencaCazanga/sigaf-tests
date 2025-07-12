@@ -1,0 +1,25 @@
+name: Frontend UI Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        working-directory: ./sigaf-testes/testes
+        run: npm install
+
+      - name: Instalar browsers do Playwright
+        working-directory: ./sigaf-testes/testes
+        run: npx playwright install --with-deps
+
+      - name: Rodar testes
+        working-directory: ./sigaf-testes/testes
+        run: npx playwright test
