@@ -13,13 +13,13 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Instalar dependências
-        working-directory: ./sigaf-tests/tree/main/tests
+        working-directory: ./tests
         run: npm install
 
-      - name: Instalar browsers do Playwright
-        working-directory: ./sigaf-tests/tree/main/tests
+      - name: Instalar Playwright e browsers
+        working-directory: ./tests
         run: npx playwright install --with-deps
 
-      - name: Rodar testes
-        working-directory: ./sigaf-tests/tree/main/tests
+      - name: Executar testes Playwright
+        working-directory: ./tests
         run: npx playwright test
