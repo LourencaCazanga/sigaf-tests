@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Instalar dependências
-        working-directory: ./sigaf-testes/testes
+        working-directory: .sigaf-tests/blob/main/tests
         run: npm install
 
       - name: Instalar browsers do Playwright
