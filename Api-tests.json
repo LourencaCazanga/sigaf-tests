@@ -1,0 +1,354 @@
+{
+  "v": 8,
+  "id": "cmcvkgov60pz8uevhe2cqe2xq",
+  "name": "backend-inscrição",
+  "folders": [
+    {
+      "v": 8,
+      "id": "cmcvkk84n0pzhuevhku81tai8",
+      "name": "enrollment",
+      "folders": [],
+      "requests": [
+        {
+          "v": "14",
+          "name": "register",
+          "method": "POST",
+          "endpoint": "https://backend-sigaf.onrender.com/api/v1/enrollments",
+          "params": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUyMDkyNzg0LCJpYXQiOjE3NTIwODkxODQsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.D6Juq52zZOlyLcPiC0lhtDF8S806RvQ7SDaffZ9eqB7CRV0ZB--wr17464bq7hG7zObv7zI5X2P-1pcKxNLHWmDXpDTq3lo0lwMmzRk7-ZFyGNm6GaDESiCPAO9tfDCUk2Al6q1B3H9q5qV6su2gbJGH940KWoBB0wLoyENtmaoaonctHBLPz7PIRgs62bLAQIWESKZCbw_5oWgc1of_u-ifoWPtatmVbXZEqIWh028JWnvp7w8Kb0qV2wCBX6jnkioujsAvy233GO2TpobgfUrXtOsOh8n_ChhTsSHxXC7OJM5k4EE5yf5UzKNEnI0i-Z8zMJohzPKXwlz7X5Yeqw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "multipart/form-data",
+            "body": [
+              {
+                "key": "applicantName",
+                "active": true,
+                "isFile": false,
+                "value": "CJ Chico Moeda"
+              },
+              {
+                "key": "identificationNumber",
+                "active": true,
+                "isFile": false,
+                "value": "00923399LA041"
+              },
+              {
+                "key": "identificationType",
+                "active": true,
+                "isFile": false,
+                "value": "BI"
+              },
+              {
+                "key": "targetSchoolId",
+                "active": true,
+                "isFile": false,
+                "value": "d18eaba3-ce60-41c4-95bb-dd3e4e0633ae"
+              },
+              {
+                "key": "targetCourseId",
+                "active": true,
+                "isFile": false,
+                "value": "ba64fd10-0604-49b3-b3bb-74a30aef6ba8"
+              },
+              {
+                "key": "phoneNumber",
+                "active": true,
+                "isFile": false,
+                "value": "941038639"
+              },
+              {
+                "key": "birthDate",
+                "active": true,
+                "isFile": false,
+                "value": "2000-09-12"
+              },
+              {
+                "key": "fullAddress",
+                "active": true,
+                "isFile": false,
+                "value": "Rua A, Popular, Luanda"
+              },
+              {
+                "key": "email",
+                "active": true,
+                "isFile": false,
+                "value": "lourenca@gmail.com"
+              },
+              {
+                "key": "guardianName",
+                "active": true,
+                "isFile": false,
+                "value": "Armanho"
+              },
+              {
+                "key": "guardianPhoneNumber",
+                "active": true,
+                "isFile": false,
+                "value": "922323456"
+              },
+              {
+                "key": "identificationDocument",
+                "active": true,
+                "isFile": false,
+                "value": ""
+              },
+              {
+                "key": "academicCertificateDocument",
+                "active": true,
+                "isFile": false,
+                "value": ""
+              }
+            ],
+            "isBulkEditing": false
+          },
+          "requestVariables": [
+            {
+              "key": "endpoint",
+              "value": "enrollments",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "14",
+          "name": "list-by-school",
+          "method": "GET",
+          "endpoint": "<<base_url>>/<<endpoint>>/school/d18eaba3-ce60-41c4-95bb-dd3e4e0633ae",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "endpoint",
+              "value": "enrollments",
+              "active": true
+            }
+          ],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_md0cqiex_41ff2280-c741-40cb-b0e3-7f1f52f01d91"
+    },
+    {
+      "v": 8,
+      "id": "cmcvlb7ni1l1svw1ascpmi8i7",
+      "name": "course",
+      "folders": [],
+      "requests": [
+        {
+          "v": "14",
+          "name": "list-by-school",
+          "method": "GET",
+          "endpoint": "https://backend-sigaf.onrender.com/api/v1/courses/school/d18eaba3-ce60-41c4-95bb-dd3e4e0633ae",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUyMDkyNzg0LCJpYXQiOjE3NTIwODkxODQsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.D6Juq52zZOlyLcPiC0lhtDF8S806RvQ7SDaffZ9eqB7CRV0ZB--wr17464bq7hG7zObv7zI5X2P-1pcKxNLHWmDXpDTq3lo0lwMmzRk7-ZFyGNm6GaDESiCPAO9tfDCUk2Al6q1B3H9q5qV6su2gbJGH940KWoBB0wLoyENtmaoaonctHBLPz7PIRgs62bLAQIWESKZCbw_5oWgc1of_u-ifoWPtatmVbXZEqIWh028JWnvp7w8Kb0qV2wCBX6jnkioujsAvy233GO2TpobgfUrXtOsOh8n_ChhTsSHxXC7OJM5k4EE5yf5UzKNEnI0i-Z8zMJohzPKXwlz7X5Yeqw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [
+            {
+              "key": "endpoint",
+              "value": "courses",
+              "active": true
+            }
+          ],
+          "responses": {}
+        },
+        {
+          "v": "14",
+          "name": "Register",
+          "method": "POST",
+          "endpoint": "https://backend-sigaf.onrender.com/api/v1/courses",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUyMDk0NzUwLCJpYXQiOjE3NTIwOTExNTAsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.R5o8qXVpQmgbLLDsqm3UP1it4irBJCJWJhRRe0XYu4A87wy8-T2VDOVVsantmMYEv-_HzAVX9_vPYVtnhpeRYaaR_54P1AQP0eSUK1PTnG-tI_nPHJXB3Ky8rUbi9W0otPh0c9XiGfALp-Z1hhg8o1CpxbkcbHBl9kqglFyMMKTM7hRqn0Jw_IAN8ex825EqlMm5_wjMtcD9Y-caqL-kPqkj_ddZV_FwVidSSnCAcb5NPcAzMmXZfQX6eg2Jmuov6txlO01BMuRt53UQSwM2BjVbo8sGHRam2RBH1o3L80wKQ_hkoLktPXa4j4ggM79ITPfHBxJvclRPbahEgn4XLQ",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"Intitudo de Saude do kilamba\",\n  \"code\": \"SXWCVYILMWDFT-7887RK\",\n  \"description\": \"SKKSJXMXM\",\n  \"duration\": 2,\n  \"level\": \"PRIMARY\",\n  \"schoolIds\": [\n    \"d18eaba3-ce60-41c4-95bb-dd3e4e0633ae\"\n  ]\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_md0cqiex_dedf62a0-c07e-42b2-8daa-d9e0e23d6008"
+    },
+    {
+      "v": 8,
+      "id": "cmcwdx3eu1tabvw1a07dweppk",
+      "name": "School",
+      "folders": [],
+      "requests": [
+        {
+          "v": "14",
+          "name": "List School",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "14",
+          "name": "Register",
+          "method": "POST",
+          "endpoint": "https://backend-sigaf.onrender.com/api/v1/schools",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUyMDkyNzg0LCJpYXQiOjE3NTIwODkxODQsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.D6Juq52zZOlyLcPiC0lhtDF8S806RvQ7SDaffZ9eqB7CRV0ZB--wr17464bq7hG7zObv7zI5X2P-1pcKxNLHWmDXpDTq3lo0lwMmzRk7-ZFyGNm6GaDESiCPAO9tfDCUk2Al6q1B3H9q5qV6su2gbJGH940KWoBB0wLoyENtmaoaonctHBLPz7PIRgs62bLAQIWESKZCbw_5oWgc1of_u-ifoWPtatmVbXZEqIWh028JWnvp7w8Kb0qV2wCBX6jnkioujsAvy233GO2TpobgfUrXtOsOh8n_ChhTsSHxXC7OJM5k4EE5yf5UzKNEnI0i-Z8zMJohzPKXwlz7X5Yeqw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"Instituto de Saúde do kilamba\",\n  \"nif\": \"672045586\",\n  \"responsibleUserId\": \"\",\n  \"status\": \"ativa\",\n  \"license\": \"L00489\",\n  \"numberOfClassrooms\": 1073741824,\n  \"numberOfLaboratories\": 1073741824,\n  \"institutionCreationDate\": \"2025-07-09\",\n  \"latitude\": \"-5865297\",\n  \"longitude\": \";0998766\",\n  \"address\": \"kilama\",\n  \"city\": \"luanda\",\n  \"province\": \"luanda\",\n  \"phoneNumber\": \"976479191\",\n  \"email\": \"itk@gmail.com\",\n  \"website\": \"https://website-app-6v7k.onrender.com\",\n  \"fax\": \"2821240833\",\n  \"schoolType\": \"PUBLIC\",\n  \"schoolLevel\": \"MAIN\",\n  \"managerIds\": [\n    \"3fa85f64-5717-4562-b3fc-2c963096afa9\"\n  ],\n  \"courseIds\": [\n    \"3fa85f64-5717-4562-b3fc-2c963f38af96\"\n  ],\n  \"logo\": \"kksjjkskjskjkj\",\n  \"licenseURI\": \"https://website-app-6v7k.onrender.com\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_md0cqiex_31b7222f-c334-44a9-928c-702d2a81243f"
+    },
+    {
+      "v": 8,
+      "id": "cmcwe78ni1tahvw1axulqxjf8",
+      "name": "User",
+      "folders": [],
+      "requests": [
+        {
+          "v": "14",
+          "name": "Register",
+          "method": "GET",
+          "endpoint": "https://backend-sigaf.onrender.com/api/v1/users/register",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUyMDk0NzUwLCJpYXQiOjE3NTIwOTExNTAsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.R5o8qXVpQmgbLLDsqm3UP1it4irBJCJWJhRRe0XYu4A87wy8-T2VDOVVsantmMYEv-_HzAVX9_vPYVtnhpeRYaaR_54P1AQP0eSUK1PTnG-tI_nPHJXB3Ky8rUbi9W0otPh0c9XiGfALp-Z1hhg8o1CpxbkcbHBl9kqglFyMMKTM7hRqn0Jw_IAN8ex825EqlMm5_wjMtcD9Y-caqL-kPqkj_ddZV_FwVidSSnCAcb5NPcAzMmXZfQX6eg2Jmuov6txlO01BMuRt53UQSwM2BjVbo8sGHRam2RBH1o3L80wKQ_hkoLktPXa4j4ggM79ITPfHBxJvclRPbahEgn4XLQ",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"João\",\n  \"phone\": \"234567892\",\n  \"email\": \"joãosilva@gmail.com\",\n  \"password\": \"123456\",\n  \"identity\": \"admin\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_md0cqiex_13d5beb1-13c1-487d-a61a-1497b09a84a9"
+    },
+    {
+      "v": 8,
+      "id": "cmd0cjies2jzovw1a6y2ivafx",
+      "name": "Auth",
+      "folders": [],
+      "requests": [
+        {
+          "v": "14",
+          "name": "Login",
+          "method": "GET",
+          "endpoint": "https://backend-sigaf.onrender.com/api/v1/auth/login",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n\"username\": \"admin@sigaf.com\",\n\"password\": \"password1234\"\n  \n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "_ref_id": "coll_md0cqiex_7c1e063b-3d79-4be9-a037-6a25613c65ce"
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "inherit",
+    "authActive": true
+  },
+  "headers": [],
+  "_ref_id": "coll_md0cqiex_0a9aea9d-d2e0-4c37-b69a-1e3ba4130bb0"
+}
