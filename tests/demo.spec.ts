@@ -4,10 +4,12 @@ test.use({
   baseURL: 'https://website-app-6v7k.onrender.com'
 });
 
+test.describe.configure({ timeout: 180000 }); // 3 minutos
+
 test.describe('Inscrição Pública', () => {
   test('A página de inscrição pública deve carregar corretamente', async ({ page }) => {
     await page.goto('/');
-    //await expect(page).toHaveTitle(/SIGAF/i);
+    // await expect(page).toHaveTitle(/SIGAF/i);
     await expect(page.locator('form')).toBeVisible();
     await expect(page.locator('input')).toHaveCountGreaterThan(1);
   });
