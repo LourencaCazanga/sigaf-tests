@@ -1,0 +1,10 @@
+{
+  "name": "sigaf-tests-github",
+  "version": "1.0.0",
+  "scripts": {
+    "test:ui": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0"
+  }
+}
