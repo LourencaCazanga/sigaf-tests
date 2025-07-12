@@ -17,9 +17,9 @@ jobs:
         run: npm install
 
       - name: Instalar browsers do Playwright
-        working-directory: ./sigaf-testes/testes
+        working-directory: ./sigaf-tests/tree/main/tests
         run: npx playwright install --with-deps
 
       - name: Rodar testes
-        working-directory: ./sigaf-testes/testes
+        working-directory: ./sigaf-tests/tree/main/tests
         run: npx playwright test
